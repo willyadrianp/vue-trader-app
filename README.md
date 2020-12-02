@@ -1,4 +1,4 @@
-# vue-clean-template
+# vue-trader-app
 
 ## Project setup
 ```
