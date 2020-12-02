@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <h1>Welcome to Trader App</h1>
+        <p>Your Funds: {{ funds }}</p>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import { mapGetters } from 'vuex';
+import * as types from '../store/types';
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
-  },
+    computed: {
+        ...mapGetters({
+            funds: types.GET_FUNDS_G1,
+        }),
+    },
 };
 </script>
